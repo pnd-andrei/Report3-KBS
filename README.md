@@ -50,10 +50,11 @@ Build and run with Docker:
 docker build -t fuzzy-pid-controller .
 
 # Run experiments and generate plots
-docker run -v $(pwd)/results:/app/results fuzzy-pid-controller
+# On Linux/Mac:
+docker run -v "$(pwd)/results":/app/results fuzzy-pid-controller
 
 # On Windows PowerShell:
-docker run -v ${PWD}/results:/app/results fuzzy-pid-controller
+docker run -v "${PWD}\results:/app/results" fuzzy-pid-controller
 ```
 
 Results will be saved to the `results/` directory.
